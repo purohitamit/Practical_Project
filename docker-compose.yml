@@ -7,6 +7,10 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: charactersdb
+    volumes:
+      - type: volume
+        source: characters-vol
+        target: /var/lib/mysql
     networks:
       - "character-net"
   frontend:
@@ -36,5 +40,7 @@ services:
     build: ./weapon
     networks:
       - "character-net"
+volumes:
+  characters-vol:
 networks:
   character-net:
