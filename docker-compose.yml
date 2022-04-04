@@ -1,8 +1,20 @@
 version: "3.8"
 services:
+  mysql:
+    container_name: mysql
+    image: amitpurohit29/character-db:latest
+    build: ./characters-db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: charactersdb
+    networks:
+      - "character-net"
   frontend:
+    container_name: frontend 
     image: amitpurohit29/frontend:latest
     build: ./frontend
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     ports:
       - published: 80
         target: 5000
