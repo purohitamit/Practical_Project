@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2> History </h2>
+<br>
+{% for character in character_history %}
+{{ character.race }} {{ character.claas }} {{ character.weapon}}
+<br>
+{% endfor %}
+{% endblock body %}
