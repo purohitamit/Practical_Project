@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  frontend:
+    image: amitpurohit29/frontend:latest
+    build: ./frontend
+    ports:
+      - published: 80
+        target: 5000
+        protocol: tcp
+    networks:
+      - "character-net"
+  race:
+    image: amitpurohit29/race:latest
+    build: ./race
+    networks:
+      - "character-net"
+  claas:
+    image: amitpurohit29/claas:latest
+    build: ./claas
+    networks:
+      - "character-net"
+  weapon:
+    image: amitpurohit29/weapon:latest
+    build: ./weapon
+    networks:
+      - "character-net"
+networks:
+  character-net:
