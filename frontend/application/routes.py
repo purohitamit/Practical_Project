@@ -10,8 +10,8 @@ def home():
     new_character = Characters(race=race.json()["race"], claas=claas.json()["claas"], weapon=weapon.json()["weapon"])
     db.session.add(new_character)
     db.session.commit()
-    past5 = Events.query.order_by(Characters.id.desc()).limit(5).all()
-    return render_template("index.html", race=race.json()["race"], claas=claas.json()["claas"], weapon=weapon.json()["weapon"], past5=past5.json()["past5"])
+    past5 = Characters.query.order_by(Characters.id.desc()).limit(5).all()
+    return render_template("index.html", race=race.json()["race"], claas=claas.json()["claas"], weapon=weapon.json()["weapon"], past5=past5)
 
 @app.route('/history', methods=['GET'])
 def history():

@@ -2,8 +2,8 @@
 {% block body %}
 <h2> History </h2>
 <br>
-{% for character in character_history %}
-{{ character.race }} {{ character.claas }} {{ character.weapon}}
+{% for new_character in character_history %}
+<h2> Race ---- {{ new_character.race }}, Class ---- {{new_character.claas}},  Weapon ---- {{new_character.weapon}}.</h2>
 <br>
 {% endfor %}
 {% endblock body %}
