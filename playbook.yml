@@ -27,6 +27,13 @@
   vars:
     docker_user: jenkins
 
+- hosts: webservers
+  become: true
+  roles:
+  - nginx
+  vars:
+    docker_user: amit
+
 - hosts: swarmmanagers
   become: true
   roles:
@@ -48,3 +55,4 @@
   - swarm-worker
   vars:
     docker_user: amit
+
