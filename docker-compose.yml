@@ -33,10 +33,7 @@ services:
     build: ./frontend
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-    ports:
-      - published: 80
-        target: 5000
-        protocol: tcp
+    
     networks:
       - "character-net"
   race:
