@@ -1,5 +1,19 @@
 version: "3.8"
 services:
+  nginx:
+    container_name: nginx
+    image: nginx:alpine
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf
+    networks:
+      - events-net
+
   mysql:
     container_name: mysql
     image: amitpurohit29/character-db:latest
@@ -28,19 +42,26 @@ services:
   race:
     image: amitpurohit29/race:latest
     build: ./race
+    deploy:
+      replicas: 3
     networks:
       - "character-net"
   claas:
     image: amitpurohit29/claas:latest
     build: ./claas
+    deploy:
+      replicas: 3
     networks:
       - "character-net"
   weapon:
     image: amitpurohit29/weapon:latest
     build: ./weapon
+    deploy:
+      replicas: 3
     networks:
       - "character-net"
 volumes:
   characters-vol:
 networks:
   character-net:
+    # driver: overlay (uncomment when deploying via docker stack)
