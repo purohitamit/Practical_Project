@@ -60,7 +60,7 @@ I used git for the version control and as the repository was hosted on Github, I
 ## Risk Assessment:
 
 A standard risk assessment was carried out at the start of the project as per the below:
-![risk](proj_images/risk_assessment.xlsx)
+![risk](proj_images/risk.PNG)
 
 ## Ansible:
 
