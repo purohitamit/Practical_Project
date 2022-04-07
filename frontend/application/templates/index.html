@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2> Home </h2>
+<br>
+    <div>
+        <h2 style="color: rgb(2, 0, 128); text-align: center"> Today your fantasy role is {{ race }} Race from the {{ claas }} Class and your Weapon today will be {{ weapon }}.</h2>
+        
+    </div>
+<br><br><br><br>
+<h3> Last 5 Characters: </h3>
+<br>
+{% for characters in past5 %}
+<h2 style="color: rgb(2, 0, 128); text-align: center"> Your fantasy role was {{ characters.race }} Race from the {{ characters.claas }} Class and you fought with {{ characters.weapon }}.</h2>
+{% endfor %}
+{% endblock body %}

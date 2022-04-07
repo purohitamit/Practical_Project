@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2> History </h2>
+<br>
+{% for new_character in character_history %}
+<h2> Race ---- {{ new_character.race }}, Class ---- {{new_character.claas}},  Weapon ---- {{new_character.weapon}}.</h2>
+<br>
+{% endfor %}
+{% endblock body %}
