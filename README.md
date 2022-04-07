@@ -20,7 +20,7 @@ Planning:
 
 I used git for the version control and as the repository was hosted on Github, I used it's Project feature for the project tracking. The whole project was broken down into 8 tasks so 8 issues were created. Every time the task was completed and was pushed to github repo, the issue was automatically closed which was linked to the project. Below are the pictures taken at the start and after completing all the tasks.
 
-![tracker](/home/amit/Practical_Project/proj_images/pipeline.PNG)
+![tracker](proj_images/pipeline.PNG)
 
 
 
