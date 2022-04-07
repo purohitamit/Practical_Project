@@ -3,13 +3,13 @@
 ## Contents
 
 - [Introduction](#Introduction)
-- [Project Objective](#Project Objective)
+- [Project Objective](#Project-Objective)
 - [Architecture](#Architecture)
-- [Entity Relationship Diagram](#Entity Relationship Diagram)
-- [Project Tracking](#Project Tracking)
-- [Risk Assessment](#Risk Assessment)
+- [Entity Relationship Diagram](#Entity-Relationship-Diagram)
+- [Project Tracking](#Project-Tracking)
+- [Risk Assessment](#Risk-Assessment)
 - [Ansible](#Ansible)
-- [CI Pipeline](#CI Pipeline)
+- [CI Pipeline](#CI-Pipeline)
 - [Testing](#Testing)
 - [Development](#Development)
 - [Points of Improvement](#Points-of-Improvement)
