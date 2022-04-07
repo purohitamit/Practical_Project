@@ -29,7 +29,7 @@ services:
       - "character-net"
   frontend:
     container_name: frontend 
-    image: amitpurohit29/frontend:Version:1.1.2
+    image: amitpurohit29/frontend:Version2
     build: ./frontend
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
